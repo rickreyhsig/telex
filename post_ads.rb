@@ -27,7 +27,7 @@ sleep 15
 	browser.text_field(id: 'link_ads').set anuncio_text+num.to_s
 	browser.button(type: 'submit').click
 	sleep 3
-	p "#{num} --- \xE2\x9C\x94"
+	p "#{num} --- \xE2\x9C\x94 "
 	browser.goto 'https://office.telexbit.com/Ads/AdsSelectIII'
 end
 
