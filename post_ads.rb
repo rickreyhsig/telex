@@ -14,12 +14,12 @@ anuncio_text = browser.link(:id => 'ad'+user+'0').text
 browser.goto 'https://office.telexbit.com/'
 browser.text_field(name: 'username').set cnf['user']
 browser.text_field(name: 'password').set cnf['password']
-sleep 13 # Give use time to do captcha
+sleep 12 # Give use time to do captcha
 browser.button(type: 'submit').click
 
 #browser.link(:text =>'3 - Valide seus anúncios').click
 browser.goto 'https://office.telexbit.com/Ads/AdsSelectIII'
-sleep 15
+sleep 5
 
 [0,1,2,3,4].each do |num|
 	browser.select_list(:name, "n_adcentral").select_value(num.to_s)
