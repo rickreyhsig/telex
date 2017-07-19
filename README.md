@@ -1,1 +1,1 @@
-# telex
+# telex automator
