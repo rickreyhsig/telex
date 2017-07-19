@@ -22,7 +22,7 @@ browser.goto 'https://office.telexbit.com/Ads/AdsSelectIII'
 sleep 15
 
 [0,1,2,3,4].each do |num|
-	browser.select_list(:name, "n_adcentral").select_value("0")
+	browser.select_list(:name, "n_adcentral").select_value(num.to_s)
 	browser.text_field(id: 'site_ads').set anuncio_text
 	browser.text_field(id: 'link_ads').set anuncio_text+num.to_s
 	browser.button(type: 'submit').click
