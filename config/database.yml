@@ -1,0 +1,17 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: telex_production
+  pool: 5
+  username: rkreyhsig
+  password: password1
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: telex_development
+  pool: 5
+  username: rkreyhsig
+  password:
+
+
