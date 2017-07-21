@@ -1,4 +1,8 @@
 class ProjectsController < ApplicationController
+
+  def post_ads
+  end
+
   # GET /projects
   # GET /projects.json
   def index

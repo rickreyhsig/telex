@@ -30,7 +30,7 @@ browser.link(:text =>'3 - Valide seus anúncios').click
 	browser.text_field(id: 'site_ads').set anuncio_text
 	browser.text_field(id: 'link_ads').set anuncio_text+num.to_s
 	browser.button(type: 'submit').click
-	sleep 3
+	sleep 2
 	p "#{num} --- \xE2\x9C\x94 "
 	browser.goto 'https://office.telexbit.com/Ads/AdsSelectIII'
 end

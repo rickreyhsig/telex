@@ -22,7 +22,4 @@
 
 <%= link_to 'New Project', new_project_path %>
 
-<% browser = Watir::Browser.new %>
-<% browser.goto 'http://brasiltelexbit.com/publicar.php' %>
-<!-- Try getting post_ads.rb script to run from a click of a button here. If we can get it to open 
-from the same browser, we might be able to bypass auth and the CAPTCHA. -->
+<%= link_to 'Post Ads', post_ads_path  %>
