@@ -1,5 +1,8 @@
 Congrats, your ads are posted! <br/>
 
+<%# chromedriver_path = File.join(File.absolute_path('../..', File.dirname(__FILE__)),"browsers","chromedriver.exe") %>
+<% Selenium::WebDriver::Chrome.driver_path = '/app/.apt/usr/bin/google-chrome' %>
+
 <% user = 'ricky1477' %>
 <% password = '' %>
 
