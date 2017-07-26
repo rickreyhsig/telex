@@ -10,7 +10,7 @@ browser.text_field(name: 'username').set cnf['user']
 browser.text_field(name: 'password').set cnf['password']
 browser.execute_script("alert(\"Please resolve the CAPTCHA to continue.\")") 
 sleep 3
-browser.alert.ok
+#browser.alert.ok
 
 # Make sure auth worked
 browser.link(:text =>'3 - Valide seus anúncios').wait_until_present
@@ -30,7 +30,7 @@ browser.link(:text =>'3 - Valide seus anúncios').click
 	browser.text_field(id: 'site_ads').set anuncio_text
 	browser.text_field(id: 'link_ads').set anuncio_text+num.to_s
 	browser.button(type: 'submit').click
-	sleep 2
+	sleep 1
 	p "#{num} --- \xE2\x9C\x94 "
 	browser.goto 'https://office.telexbit.com/Ads/AdsSelectIII'
 end

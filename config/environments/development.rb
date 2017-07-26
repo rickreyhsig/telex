@@ -34,4 +34,5 @@ Telex::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  chrome_bin = ENV.fetch('GOOGLE_CHROME_SHIM', nil)
 end
