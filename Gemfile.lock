@@ -135,6 +135,7 @@ DEPENDENCIES
   rails
   rails_12factor
   sass-rails (~> 3.2.3)
+  selenium-webdriver
   uglifier (>= 1.0.3)
   watir-rails
 
