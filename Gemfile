@@ -5,7 +5,7 @@ gem 'rails'
 gem 'pg'
 gem 'watir-rails'
 #gem 'selenium-webdriver'
-gem "chromedriver-helper"
+#gem "chromedriver-helper"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
