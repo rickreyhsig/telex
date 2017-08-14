@@ -8,6 +8,7 @@ gem 'selenium-webdriver'
 gem 'chromedriver-helper'
 gem 'minitest'
 gem 'test-unit'
+gem 'twitter-bootstrap-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
