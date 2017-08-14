@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
   def post_ads
+    @project = Project.find(params[:id])
   end
 
   # GET /projects

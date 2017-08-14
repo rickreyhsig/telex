@@ -4,11 +4,10 @@ ruby '2.2.4'
 gem 'rails'
 gem 'pg'
 gem 'watir-rails'
-#gem 'selenium-webdriver'
-#gem "chromedriver-helper"
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'selenium-webdriver'
+gem 'chromedriver-helper'
+gem 'minitest'
+gem 'test-unit'
 
 # Gems used only for assets and not required
 # in production environments by default.
