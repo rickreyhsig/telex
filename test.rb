@@ -1,12 +1,16 @@
 require 'rubygems'
 require 'watir'
 require 'selenium-webdriver'
+
+#Selenium::WebDriver::Chrome.driver_path="/Users/ricardokreyhsig/.rvm/gems/ruby-2.2.4/bin/chromedriver"
 Selenium::WebDriver::Chrome.driver_path="/app/.chromedriver/bin/chromedriver"
 #cnf = YAML::load_file(File.join('./', 'config.yml'))
 #user = cnf['user']
 
 # Authenticate
 browser = Watir::Browser.new 
+browser.goto 'https://google.com/'
+=begin
 browser.goto 'https://office.telexbit.com/'
 browser.text_field(name: 'username').set cnf['user']
 browser.text_field(name: 'password').set cnf['password']
@@ -41,3 +45,4 @@ p 'Done posting ads'
 browser.goto 'https://office.telexbit.com/Ads/MyAdcentral'
 puts browser.title
 browser.close
+=end

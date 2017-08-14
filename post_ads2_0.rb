@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'watir'
-#cnf = YAML::load_file(File.join('./', 'config.yml'))
-#user = cnf['user']
+cnf = YAML::load_file(File.join('./', 'config.yml'))
+user = cnf['user']
 
 # Authenticate
 browser = Watir::Browser.new 
