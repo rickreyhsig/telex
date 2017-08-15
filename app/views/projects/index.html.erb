@@ -8,9 +8,10 @@
         <th colspan="4"></th>
       </tr>
     <% @projects.each do |project| %>
-    <% posted = project.ad_timestamp.present? && ( (project.ad_timestamp + 1.hour).today? ) ? true : false %> <!-- Checks from 11PM last night -->
+    <% posted = project.ad_timestamp.present? && (project.ad_timestamp+3.hour).today? ? true : false %> <!-- Checks from 11PM last night (There is a 4 hour offset in DB and -1 to account for 11 PM) -->
       <tr style="background-color: <%= 'lightgreen' if posted %>">
         <td><%= project.name %></td>
+        <td><%#= project.ad_timestamp ? project.ad_timestamp.strftime("%H:%M %m/%d/%Y") : '' %></td> <!-- For troubleshooting -->
         <td><%= posted ?
             '<i class="fa fa-check" aria-hidden="true" style="color:green"></i>'.html_safe : '<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>'.html_safe %></td>
         <td><%= link_to 'Post Ads', post_ads_path(id: project.id) %></td>

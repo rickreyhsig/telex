@@ -42,7 +42,7 @@ Congrats, your ads are posted! <br/>
 <%= puts browser.title %>
 <% browser.close %>
 
-<% @project.ad_timestamp = Time.now %>
+<% @project.ad_timestamp = DateTime.now %>
 <% @project.save! %>
 
 <br/>
