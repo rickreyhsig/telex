@@ -9,10 +9,11 @@ browser.goto 'https://office.telexbit.com/'
 browser.text_field(name: 'username').set user
 browser.text_field(name: 'password').set @project.password
 browser.execute_script("alert(\"Please resolve the CAPTCHA to continue.\")") 
-sleep 3
+#sleep 12
 
 # Make sure auth worked
-browser.link(:text =>'3 - Valide seus anúncios').wait_until_present
+#browser.link(:text =>'3 - Valide seus anúncios').wait_until_present
+browser.link(:text =>'3 - Verify your Ads').wait_until_present
 
 # Grab anuncio text
 browser.goto 'http://brasiltelexbit.com/publicar.php'
@@ -22,7 +23,8 @@ anuncio_text = browser.link(:id => 'ad'+user+'0').text
 
 # Post ads
 browser.goto 'https://office.telexbit.com/'
-browser.link(:text =>'3 - Valide seus anúncios').click
+#browser.link(:text =>'3 - Valide seus anúncios').click
+browser.link(:text =>'3 - Verify your Ads').click
 %>
 
 <% [0,1,2,3,4].each do |num| %>
