@@ -9,7 +9,7 @@ browser.goto 'https://office.telexbit.com/'
 browser.text_field(name: 'username').set user
 browser.text_field(name: 'password').set @project.password
 browser.execute_script("alert(\"Please resolve the CAPTCHA to continue.\")") 
-#sleep 12
+sleep 4
 
 # Make sure auth worked
 #browser.link(:text =>'3 - Valide seus anúncios').wait_until_present
