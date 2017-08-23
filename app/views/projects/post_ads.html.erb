@@ -5,6 +5,7 @@ user = @project.name
 
 # Authenticate
 browser = Watir::Browser.new 
+browser.window.resize_to(1200, 1200)
 browser.goto 'https://office.telexbit.com/'
 browser.text_field(name: 'username').set user
 browser.text_field(name: 'password').set @project.password
@@ -18,6 +19,7 @@ browser.link(:text =>'3 - Verify your Ads').wait_until_present
 # Grab anuncio text
 browser.goto 'http://brasiltelexbit.com/publicar.php'
 browser.text_field(name: 'usernames[]').set user
+browser.execute_script("window.scrollBy(0,500)")
 browser.input(:type =>'submit').click
 anuncio_text = browser.link(:id => 'ad'+user+'0').text
 
