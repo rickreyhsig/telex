@@ -4,12 +4,12 @@ require 'watir'
 user = @project.name
 
 # Authenticate
-browser = Watir::Browser.new 
+browser = Watir::Browser.new
 browser.window.resize_to(1200, 1200)
 browser.goto 'https://office.telexbit.com/'
 browser.text_field(name: 'username').set user
 browser.text_field(name: 'password').set @project.password
-browser.execute_script("alert(\"Please resolve the CAPTCHA to continue.\")") 
+#browser.execute_script("alert(\"Please resolve the CAPTCHA to continue.\")")
 sleep 4
 
 # Make sure auth worked
